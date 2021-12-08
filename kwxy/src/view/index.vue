@@ -132,13 +132,13 @@
       </el-header>
       <el-main>
         <el-row>
-          <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+          <el-col :xs="0" :sm="2" :md="3" :lg="4" :xl="4">
             <div style="height: 1px;"></div>
           </el-col>
-          <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16">
+          <el-col :xs="24" :sm="20" :md="18" :lg="16" :xl="16">
             <router-view/>
           </el-col>
-          <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+          <el-col :xs="0" :sm="2" :md="3" :lg="4" :xl="4">
             <div style="height: 1px;"></div>
           </el-col>
         </el-row>
