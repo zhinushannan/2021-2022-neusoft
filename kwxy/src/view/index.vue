@@ -24,8 +24,8 @@
               </div>
             </a>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>学院简介</el-dropdown-item>
-              <el-dropdown-item>师资队伍</el-dropdown-item>
+              <a href="/#/school"><el-dropdown-item>学院简介</el-dropdown-item></a>
+              <a href="/#/teacherList"><el-dropdown-item>师资队伍</el-dropdown-item></a>
             </el-dropdown-menu>
           </el-dropdown>
           <el-dropdown>
@@ -33,6 +33,10 @@
               <div class="top-nav">
                 人才培养
               </div>
+              <el-dropdown-menu slot="dropdown">
+                <a href="/#/teachers"><el-dropdown-item>名师风采</el-dropdown-item></a>
+                <a href="/#/students"><el-dropdown-item>优秀学子</el-dropdown-item></a>
+              </el-dropdown-menu>
             </a>
           </el-dropdown>
 
