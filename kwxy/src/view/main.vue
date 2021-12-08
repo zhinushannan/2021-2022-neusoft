@@ -2,85 +2,50 @@
 
   <div>
 
-    <el-carousel height="400px">
+    <el-carousel height="350px">
       <el-carousel-item v-for="item in items" :key="item.id">
-        <img :src="item.url" alt="" height="400px">
+        <img :src="item.url" alt="" height="350px">
       </el-carousel-item>
     </el-carousel>
 
     <el-divider></el-divider>
 
     <el-row :gutter="10" style="font-size: 14px; line-height: 26px;">
-      <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
-        <el-card class="box-card">
+      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
+        <el-card style="padding: 0">
           <div slot="header" class="clearfix">
             <span>学院要闻</span>
-            <el-link style="float: right; padding: 3px 0" type="text" href="/#/more">MORE</el-link>
           </div>
-          <div style="padding-left: 30px">
-            <ul v-for="item in news" :key="item.id">
-              <a :href="item.url">
-                <li class="news" :title="item.name"><span class="news-name">{{ item.name }}</span><span
-                    style="float:right;">{{ item.date }}</span></li>
-              </a>
+          <div style="padding-left: 10px">
+            <ul>
+              <li v-for="item in news" :key="item.id" :title="item.name" style="list-style-type:none;">
+                <a :href="item.url" class="news">
+                  <el-row>
+                    <el-col :xs="16" :sm="18" :md="20" :lg="21" :xl="21" style="display: inline-block; float:left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><i class="el-icon-caret-right"></i>{{ item.name }}</el-col>
+                    <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="3" style="display: inline-block; float:right;">{{ item.date }}</el-col>
+                  </el-row>
+                </a>
+              </li>
             </ul>
           </div>
         </el-card>
       </el-col>
-      <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
-        <el-card class="box-card">
+      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12">
+        <el-card style="padding: 0">
           <div slot="header" class="clearfix">
-            <span>通知通告</span>
-            <el-link style="float: right; padding: 3px 0" type="text" href="/#/more">MORE</el-link>
+            <span>学院要闻</span>
           </div>
-          <div style="padding-left: 30px">
-            <ul v-for="item in news" :key="item.id">
-              <a :href="item.url">
-                <li class="news" :title="item.name"><span class="news-name">{{ item.name }}</span><span
-                    style="float:right;">{{ item.date }}</span></li>
-              </a>
+          <div style="padding-left: 10px">
+            <ul>
+              <li v-for="item in news" :key="item.id" :title="item.name" style="list-style-type:none;">
+                <a :href="item.url" class="news">
+                  <el-row>
+                    <el-col :xs="16" :sm="18" :md="20" :lg="21" :xl="21" style="display: inline-block; float:left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><i class="el-icon-caret-right"></i>{{ item.name }}</el-col>
+                    <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="3" style="display: inline-block; float:right;">{{ item.date }}</el-col>
+                  </el-row>
+                </a>
+              </li>
             </ul>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8">
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>快速导航</span>
-          </div>
-          <div style="padding-left: 30px">
-            <div style="margin-top: 15px; margin-bottom: 15px">
-              <a href="http://www.jsnu.edu.cn" style="margin: 10px">
-                <el-button plain>江苏师范大学</el-button>
-              </a>
-              <a href="http://10.110.222.1" style="margin: 10px">
-                <el-button plain>院办公信息网</el-button>
-              </a>
-            </div>
-            <div style="margin-top: 15px; margin-bottom: 15px">
-              <a href="http://mail.jsnu.edu.cn" style="margin: 10px;">
-                <el-button plain style="width: 125px">邮件系统</el-button>
-              </a>
-              <a href="http://kwxy.check.cnki.net" style="margin: 10px">
-                <el-button plain>论文查重系统</el-button>
-              </a>
-            </div>
-            <div style="margin-top: 15px; margin-bottom: 15px">
-              <a href="http://202.195.72.11/www/" style="margin: 10px">
-                <el-button plain style="width: 125px">敬文图书馆</el-button>
-              </a>
-              <a href="http://ykt.jsnu.edu.cn" style="margin: 10px">
-                <el-button plain style="width: 125px">校园一卡通</el-button>
-              </a>
-            </div>
-            <div style="margin-top: 15px; margin-bottom: 40px">
-              <a href="http://kwxy.jsnu.edu.cn/cyxz/list.psp" style="margin: 10px">
-                <el-button plain style="width: 125px">常用下载</el-button>
-              </a>
-              <a href="http://kwxy.jsnu.edu.cn/cyzdtj/list.psp" style="margin: 10px">
-                <el-button plain>常用站点推荐</el-button>
-              </a>
-            </div>
           </div>
         </el-card>
       </el-col>
@@ -164,12 +129,16 @@ export default {
 }
 
 .news-name {
-  display: inline-block;
-  width: 240px;
+  display:inline-block;
   float: left;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+
+.news {
+  color: black;
 }
 
 .news:hover {

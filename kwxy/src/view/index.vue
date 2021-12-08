@@ -4,81 +4,144 @@
 
     <el-container>
       <el-header style="height: 160px; padding: 0;">
-        <div style="float:left; height: 90px; margin-top: 10px; padding-left: 350px; padding-right: 350px;">
-          <img :src="logo" alt=""/>
+        <div style="height: 100px;">
+          <el-row>
+            <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+              <div style="height: 1px;"></div>
+            </el-col>
+            <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16">
+              <div style="float:left; height: 90px; margin-top: 10px;">
+                <img :src="logo" alt=""/>
+              </div>
+            </el-col>
+            <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+              <div style="height: 1px;"></div>
+            </el-col>
+          </el-row>
         </div>
-        <div
-            style="background-color: #0c508f; height: 60px; margin-top: 100px; padding-left: 350px; padding-right: 350px;">
 
-          <el-dropdown>
-            <a href="/#/main">
-              <div class="top-nav">
-                网站首页
-              </div>
-            </a>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                学院概况
-              </div>
-            </a>
-            <el-dropdown-menu slot="dropdown">
-              <a href="/#/school"><el-dropdown-item>学院简介</el-dropdown-item></a>
-              <a href="/#/teacherList"><el-dropdown-item>师资队伍</el-dropdown-item></a>
-            </el-dropdown-menu>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                人才培养
-              </div>
-              <el-dropdown-menu slot="dropdown">
-                <a href="/#/teachers"><el-dropdown-item>名师风采</el-dropdown-item></a>
-                <a href="/#/students"><el-dropdown-item>优秀学子</el-dropdown-item></a>
-              </el-dropdown-menu>
-            </a>
-          </el-dropdown>
+        <div style="background-color: #0c508f; height: 60px;">
+          <el-row>
+            <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+              <div style="height: 1px;"></div>
+            </el-col>
+            <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16">
+              <el-row>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        网站首页
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
 
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                招生就业
-              </div>
-            </a>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                广纳贤才
-              </div>
-            </a>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                合作交流
-              </div>
-            </a>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                校园生活
-              </div>
-            </a>
-          </el-dropdown>
-          <el-dropdown>
-            <a href="#">
-              <div class="top-nav">
-                信息公开
-              </div>
-            </a>
-          </el-dropdown>
+
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        学院概况
+                      </div>
+                    </a>
+                    <el-dropdown-menu slot="dropdown">
+                      <a href="/#/school">
+                        <el-dropdown-item>学院简介</el-dropdown-item>
+                      </a>
+                      <a href="/#/teacherList">
+                        <el-dropdown-item>师资队伍</el-dropdown-item>
+                      </a>
+                    </el-dropdown-menu>
+                  </el-dropdown>
+                </el-col>
+
+
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        人才培养
+                      </div>
+                      <el-dropdown-menu slot="dropdown">
+                        <a href="/#/teachers">
+                          <el-dropdown-item>名师风采</el-dropdown-item>
+                        </a>
+                        <a href="/#/students">
+                          <el-dropdown-item>优秀学子</el-dropdown-item>
+                        </a>
+                      </el-dropdown-menu>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        招生就业
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        广纳贤才
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        合作交流
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        校园生活
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+                <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" class="top-nav">
+                  <el-dropdown style="width: 100%;">
+                    <a class="top-nav-a" href="/#/">
+                      <div>
+                        信息公开
+                      </div>
+                    </a>
+                  </el-dropdown>
+                </el-col>
+              </el-row>
+            </el-col>
+            <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+              <div style="height: 1px;"></div>
+            </el-col>
+          </el-row>
+
+
         </div>
+
       </el-header>
-      <el-main style="margin-left: 350px; margin-right: 350px;">
-        <router-view/>
+      <el-main>
+        <el-row>
+          <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+            <div style="height: 1px;"></div>
+          </el-col>
+          <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16">
+            <router-view/>
+          </el-col>
+          <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
+            <div style="height: 1px;"></div>
+          </el-col>
+        </el-row>
       </el-main>
       <el-footer style="height: 250px; padding: 0;margin: 0">
         <div style="margin-top: 10px; background-color: #0c5b95">
@@ -108,6 +171,9 @@ export default {
       logo: logo,
       footer: footer
     }
+  },
+  mounted() {
+    this.$router.push("main")
   }
 }
 </script>
@@ -137,16 +203,28 @@ body > .el-container {
   line-height: 320px;
 }
 
-.top-nav {
+a {
+  text-decoration: none;
+}
+
+.top-nav-a {
   font-size: 16px;
   color: white;
-  padding-left: 40px;
-  padding-right: 40px;
+}
+
+.top-nav-a:hover {
+  font-size: 16px;
+  color: black;
+}
+
+.top-nav {
+  color: white;
+  text-align: center;
 }
 
 .top-nav:hover {
-  color: black;
   background-color: white;
+  color: black;
 }
 
 </style>
